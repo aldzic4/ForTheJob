@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="prvinaslov"></h1>
+    <p id="prvi"></p>
+    <p id="drugi"></p>
+    <button onclick="novafunkcija()">klikni</button>
+
+    <script>
+         const osoba = {
+      ime:"Abdullah",
+       prezime:"Aldzic",
+       godina_rodjenja: 2000,
+       visina:192,
+       tezina:80,
+       godine: function (){
+         return 2020-this.godina_rodjenja;
+       }, 
+      fullime: function(){
+       return this.ime + " " + this.prezime;
+  },
+
+         }
+
+         function novafunkcija(){
+            document.getElementById("drugi").innerHTML=osoba.fullime();
+             
+         }
+
+
+
+       
+        
+  osoba.fullime();
+    osoba.godine();
+    
+    </script>
+    
+</body>
+</html>
