@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drugi zadatak</title>
+</head>
+<body>
+
+    <label for="num1">Unesi neki broj jednak ili veći broju jedan</label>
+    <input type="number" name="num1" id="num1"> <br>
+    <button onclick="ispisfibon()">Ispisi Fibonaccijev niz</button>
+    <p id="novip"></p>
+
+
+    <script>
+    
+    
+
+    function ispisfibon(){
+    const   fib=[0,1];
+    const   pravifib=[];
+    let i=2;
+    let n = (parseInt(document.getElementById("num1").value));
+    if(n<1){
+        alert("Upisali ste pogrešan broj!!");
+    }
+    else{
+         for(i;i<n;i++){
+             fib[i]=fib[i-1]+fib[i-2];
+             pravifib.push(fib[i]);
+
+             
+
+         }
+        }
+
+       document.getElementById("novip").innerHTML= "0,1," + pravifib;
+
+     }
+
+    </script>
+    
+</body>
+</html>
